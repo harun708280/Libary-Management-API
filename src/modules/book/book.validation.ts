@@ -7,9 +7,9 @@ export const createBookZodSchema = z.object({
   genre: z.enum([...BookGenres] as [string, ...string[]]),
   isbn: z.string(),
   description: z.string().optional(),
-  copies: z.string().min(0),
+  copies: z.number().min(0),
   available: z.boolean().optional(),
-});
+})
 
 export const updateBookZodSchema = z.object({
   title: z.string().optional(),
@@ -17,6 +17,6 @@ export const updateBookZodSchema = z.object({
   genre: z.enum([...BookGenres] as [string, ...string[]]).optional(),
   isbn: z.string().optional(),
   description: z.string().optional(),
-  copies: z.number().min(0).optional(),
+  copies: z.number().min(0,{ message: "Copies must be a positive number" }).optional(),
   available: z.boolean().optional(),
 });
