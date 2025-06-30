@@ -10,4 +10,4 @@ appRouter.get("/", (req:Request, res:Response) => {
   });
 });
 
-appRouter.use('/book',BookRouter)
+appRouter.use('/books',BookRouter)
