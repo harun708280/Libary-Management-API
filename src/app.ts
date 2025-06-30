@@ -9,7 +9,8 @@ app.use(express.json());
 
 app.use('/api',appRouter)
 
+
 app.use((req:Request, res:Response) => {
-  res.status(404).json({ success: false, message: "Api Not Found" });
+  res.status(200).json({ success: true, message: "Api running now 🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️" });
 });
 app.use(errorHandler) 

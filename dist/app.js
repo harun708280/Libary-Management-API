@@ -13,6 +13,6 @@ exports.app.use((0, cors_1.default)());
 exports.app.use(express_1.default.json());
 exports.app.use('/api', appRoutes_1.appRouter);
 exports.app.use((req, res) => {
-    res.status(404).json({ success: false, message: "Api Not Found" });
+    res.status(200).json({ success: true, message: "Api running now 🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️🏃‍➡️" });
 });
 exports.app.use(errorHandler_1.errorHandler);
